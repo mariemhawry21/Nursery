@@ -41,18 +41,24 @@ export default function App() {
           <Route path="/AddSession" exact element={<AddSession />}></Route>
           <Route path="/Extras" exact element={<Extras />}></Route>
           <Route path="/AddPurchase" exact element={<AddPurchase />}></Route>
+
           <Route path="/Funding" exact element={<Funding />}></Route>
           <Route path="/AddFunding" exact element={<AddFunding />}></Route>
+
           <Route path="/Feed" exact element={<Feed />}></Route>
           <Route path="/Filter" exact element={<Filter />}></Route>
-          <Route path="/NewActivity" exact element={<NewActivity />}></Route>
+
           <Route path="/NewActivity" exact element={<NewActivity />}></Route>
           <Route path="/Activity" exact element={<Activity />}></Route>
+
           <Route path="/Messages" exact element={<Messages />}></Route>
+
           <Route path="/Room" exact element={<Room />}></Route>
           <Route path="/AddRoom" exact element={<AddRoom />}></Route>
+
           <Route path="/AllStaff" exact element={<AllStaff />}></Route>
           <Route path="/AddStaff" exact element={<AddStaff />}></Route>
+
           <Route path="/AddChild" exact element={<AddChild />}></Route>
           <Route path="/AllChild" exact element={<AllChild />}></Route>
 

@@ -1,33 +1,13 @@
 import React, { useState } from "react";
 import "./style.css";
-import Sidenav from "../components/Sidenav";
-import NAvbar from "../components/Navbar";
-import Accordion from "../components/Accordion";
-
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import { Stack } from "@mui/material";
+import ResponsiveDrawer from "../components/Drawer";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import "../dash.css";
+import HailIcon from "@mui/icons-material/Hail";
 
 import { useNavigate } from "react-router-dom";
-
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
-import AddTaskIcon from "@mui/icons-material/AddTask";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-
-import NoChildrenIcon from "@mui/icons-material/FolderOpen";
-
+import { Typography } from "@mui/material";
 export default function Home() {
   const [showBoxes, setShowBoxes] = useState(true); // State to track visibility of boxes
 
@@ -46,17 +26,159 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  const [displayText, setDisplayText] = useState("");
-
-  const handleClick = (sentence) => {
-    setDisplayText(sentence);
-
-    // active menu
-  };
   return (
-    <div>
-      {<Sidenav />}
-      <h1>HOme</h1>
+    <div style={{ backgroundColor: "#FBFBFB", minHeight: "100vh" }}>
+      <ResponsiveDrawer />
+      <main style={{ marginTop: "80px" }}>
+        <div className="container mt-5">
+          <h1 style={{ textAlign: "start", marginBottom: 30, fontWeight: 400 }}>
+            Good Morning ,Sofa
+          </h1>
+          <h5 style={{ textAlign: "start", marginBottom: 30, fontWeight: 500 }}>
+            Site Overview
+          </h5>
+          <div className="home-grid">
+            <div className="home-grid-box">
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "10px",
+                  width: "100%",
+                  marginRight: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                <HailIcon backgroundColor="green" fontSize="large" />
+                <div
+                  className="flex flex-column "
+                  style={{
+                    textAlign: "start",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <Typography variant="h6">25 children</Typography>
+                  <Typography variant="h6">25 staff</Typography>
+                </div>
+              </Paper>
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "10px",
+                  width: "100%",
+                  marginRight: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                <HailIcon backgroundColor="green" fontSize="large" />
+                <div
+                  className="flex flex-column "
+                  style={{
+                    textAlign: "start",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <Typography variant="h6">25 children</Typography>
+                  <Typography variant="h6">25 staff</Typography>
+                </div>
+              </Paper>
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "10px",
+                  width: "100%",
+                  borderRadius: "10px",
+                }}
+              >
+                <HailIcon backgroundColor="green" fontSize="large" />
+                <div
+                  className="flex flex-column "
+                  style={{
+                    textAlign: "start",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <Typography variant="h6">25 children</Typography>
+                  <Typography variant="h6">25 staff</Typography>
+                </div>
+              </Paper>
+            </div>
+            <div className="home-grid-box-2">
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  padding: "15px",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  backgroundColor: "#BBEC6C",
+                  alignItems: "center",
+                }}
+              >
+                <HailIcon backgroundColor="blue" color="green" />
+                <Typography variant="h6">2 Medication form overview</Typography>
+              </Paper>
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  padding: "15px",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  backgroundColor: "#8AC9FE",
+                  alignItems: "center",
+                }}
+              >
+                <HailIcon backgroundColor="blue" color="green" />
+                <Typography variant="h6">4 Accident in the 7 days</Typography>
+              </Paper>
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  padding: "15px",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  backgroundColor: "#F6A7D2",
+                  alignItems: "center",
+                }}
+              >
+                <HailIcon backgroundColor="blue" color="green" />
+                <Typography variant="h6">2 Medication form overview</Typography>
+              </Paper>
+              <Paper
+                elevation={2}
+                square={false}
+                sx={{
+                  display: "flex",
+                  padding: "15px",
+                  marginBottom: "10px",
+                  borderRadius: "10px",
+                  backgroundColor: "#FEE140",
+                  alignItems: "center",
+                }}
+              >
+                <HailIcon backgroundColor="blue" color="green" />
+                <Typography variant="h6">2 Medication form overview</Typography>
+              </Paper>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
