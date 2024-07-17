@@ -33,6 +33,8 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import Badge from "@mui/material/Badge";
 import Select from "@mui/material/Select";
 import { useNavigate } from "react-router";
+import FolderSharedIcon from "@mui/icons-material/FolderShared";
+import BedroomParentIcon from "@mui/icons-material/BedroomParent";
 const drawerWidth = 240;
 
 const Search = styled("div")(({ theme }) => ({
@@ -236,6 +238,25 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="Children" />
             </ListItemButton>
           </ListItem>
+
+          <ListItem disablePadding onClick={() => navigate("/AllStaff")}>
+            <ListItemButton>
+              <ListItemIcon>
+                <FolderSharedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Staff" />
+            </ListItemButton>
+          </ListItem>
+          
+          <ListItem disablePadding onClick={() => navigate("/AllRoom")}>
+            <ListItemButton>
+              <ListItemIcon>
+                <BedroomParentIcon />
+              </ListItemIcon>
+              <ListItemText primary="Room" />
+            </ListItemButton>
+          </ListItem>
+
           <ListItem disablePadding onClick={() => navigate("/booking")}>
             <ListItemButton>
               <ListItemIcon>

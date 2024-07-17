@@ -3,21 +3,22 @@ import React from 'react';
 import { Box, Button, Checkbox, FormControl, FormControlLabel, FormGroup, InputAdornment, OutlinedInput, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import Sidenav from '../../components/Sidenav';
+
+import PersistentDrawerLeft from '../../components/Drawer';
 
 
 
 export default function AddStaff() {
   return (
     <div>
-      <Sidenav/>
-      {/* <Box height={40} sx={{ direction: "rtl" }} /> */}
+       <PersistentDrawerLeft/>
+      <Box height={30} sx={{ direction: "ltr" }} />
 
       <Box sx={{ width: "85%", direction: "ltr", marginLeft:"169px" }}>
         <div>
           {/* <h2 className='add-head' >AddChild</h2> */}
           <Link to='/AllStaff'>
-            <button className='btn btn-primary add-button' style={{marginTop:"-10px"}}>Back</button>
+            <button className='btn btn-primary add-button' style={{marginTop:"80px"}}>Back</button>
           </Link>
         </div>
 
@@ -100,7 +101,7 @@ export default function AddStaff() {
 
               {/* <button type="submit" style={{fontSize:"20px"}} className="btn btn-primary mt-4">حفظ</button> */}
 
-              <Button variant="contained" color="primary" type="submit" className='mt-4' style={{fontSize:"20px"}}>
+              <Button variant="contained" color="primary" type="submit" className='mt-1' style={{fontSize:"20px"}}>
             Submit
           </Button>
           {/* <Button variant="contained" color="secondary">

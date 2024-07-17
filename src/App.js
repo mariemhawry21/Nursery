@@ -18,12 +18,13 @@ import Activity from "./pages/Activity";
 import Feed from "./pages/AllFeed/Feed";
 import Filter from "./pages/AllFeed/Filter";
 import NewActivity from "./pages/AllFeed/New Activity";
-import Room from "./pages/Room";
-import AddRoom from "./pages/AddRoom";
+
 import AllStaff from "./pages/Staff/AllStaff";
 import AddStaff from "./pages/Staff/AddStaff";
 import AddChild from "./pages/Children/AddChild";
 import AllChild from "./pages/Children/AllChild";
+import AddRoom from "./pages/Room/AddRoom";
+import AllRoom from "./pages/Room/AllRoom";
 
 // import Maseggs from './pages/Maseggs';
 
@@ -53,14 +54,17 @@ export default function App() {
 
           <Route path="/Messages" exact element={<Messages />}></Route>
 
-          <Route path="/Room" exact element={<Room />}></Route>
-          <Route path="/AddRoom" exact element={<AddRoom />}></Route>
+         
 
           <Route path="/AllStaff" exact element={<AllStaff />}></Route>
           <Route path="/AddStaff" exact element={<AddStaff />}></Route>
 
           <Route path="/AddChild" exact element={<AddChild />}></Route>
           <Route path="/AllChild" exact element={<AllChild />}></Route>
+
+          <Route path="/AddRoom" exact element={<AddRoom />}></Route>
+          <Route path="/AllRoom" exact element={<AllRoom/>}></Route>
+
 
           {/* <Route path="/Invoicing" exact element={<Invicing/>}></Route> */}
         </Route>

@@ -4,20 +4,21 @@ import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import PersistentDrawerLeft from "../../components/Drawer";
-import ChildList from "./ChildList";
 
-export default function AllChild() {
+import RoomList from "./RoomList";
+
+export default function AllRoom() {
   return (
     <div>
       <PersistentDrawerLeft />
-      {/* <Box height={90} sx={{ direction: "ltr" }}  /> */}
+    
       <Box sx={{ width: "89%", marginLeft: "170px" }}>
         <div>
-          <Link to="/AddChild">
-            <button className="btn btn-primary add-button" style={{marginTop:"130px"}}>AddChildren</button>
+          <Link to="/AddRoom">
+            <button className="btn btn-primary add-button" style={{marginTop:"130px"}}>AddRoom</button>
           </Link>
         </div>
-        <ChildList />
+        <RoomList/>
       </Box>
     </div>
   );

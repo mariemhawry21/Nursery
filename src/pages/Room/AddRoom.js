@@ -8,7 +8,7 @@ import PersistentDrawerLeft from '../../components/Drawer';
 
 
 
-export default function AddChild() {
+export default function AddRoom() {
   return (
     <div>
        <PersistentDrawerLeft/>
@@ -17,7 +17,7 @@ export default function AddChild() {
       <Box sx={{  width: "85%", direction: "ltr", marginLeft:"169px"  }}>
         <div>
           {/* <h2 className='add-head' >AddChild</h2> */}
-          <Link to='/AllChild'>
+          <Link to='/AllRoom'>
             <button className='btn btn-primary add-button' style={{marginTop:"130px"}}>Back</button>
           </Link>
         </div>
@@ -25,7 +25,7 @@ export default function AddChild() {
         <div className='card table-style' style={{ direction: "ltr" , marginTop:"-20px"}}>
           <div className="card-header d-flex table-head-stayl">
             <h4>
-              Add Children
+            Room Details
             </h4>
           </div>
           <div className="card-body">
@@ -35,8 +35,8 @@ export default function AddChild() {
 
                   <div className='col-md-6'>
                     <div className="form-group">
-                      <label for="exampleInputEmail1" className="d-flex">First Name</label>
-                      <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+                      <label for="exampleInputEmail1" className="d-flex" >Name</label>
+                      <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='New Room ' required/>
                     </div>
                   </div>
 
@@ -44,41 +44,35 @@ export default function AddChild() {
 
                   <div className='col-md-6'>
                     <div className="form-group">
-                      <label for="exampleInputEmail1" className="d-flex">Last Name</label>
-                      <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
+                      <label for="exampleInputEmail1" className="d-flex">Capacity</label>
+                      <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='eg"9"' required/>
                     </div>
                   </div>
 
 
                   <div className='col-md-6'>
-                    <div className="form-group">
-                      <label for="exampleInputEmail1" className="d-flex">Address</label>
-                      <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
-                    </div>
+                    <label for="exampleInputEmail1" className="d-flex">Assign Children</label>
+                    <select class="form-control">
+                      <option>Nada Alaa</option>
+                      
+                    
+                    </select>
                   </div>
 
                   
                   <div className='col-md-6'>
-                    <label for="exampleInputEmail1" className="d-flex">Assign to Room(s)</label>
+                    <label for="exampleInputEmail1" className="d-flex">Assign Children</label>
                     <select class="form-control">
-                      <option>Waiting List</option>
+                      <option>Jana Alaa</option>
+                      <option>Mohammed Ahmed</option>
+                      <option>Osama Alaa</option>
+                      <option>Salma Ahmed</option>
+                      <option>Massa Alaa</option>
+                    
                     </select>
                   </div>
 
-                  <div className='col-md-6'>
-                    <label for="exampleInputEmail1" className="d-flex">Assign Key Person</label>
-                    <select class="form-control">
-                      <option>Nada Alaa</option>
-                    </select>
-                  </div>
-
-
-                  <div className='col-md-6'>
-                    <div className="form-group">
-                      <label for="exampleInputEmail1" className="d-flex">Photo</label>
-                      <input type="File" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
-                    </div>
-                  </div>
+                
                 
                  
 
