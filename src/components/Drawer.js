@@ -35,6 +35,8 @@ import Select from "@mui/material/Select";
 import { useNavigate } from "react-router";
 import FolderSharedIcon from "@mui/icons-material/FolderShared";
 import BedroomParentIcon from "@mui/icons-material/BedroomParent";
+import StackedLineChartIcon from "@mui/icons-material/StackedLineChart";
+import FeedIcon from "@mui/icons-material/Feed";
 const drawerWidth = 240;
 
 const Search = styled("div")(({ theme }) => ({
@@ -256,6 +258,28 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="Room" />
             </ListItemButton>
           </ListItem>
+
+
+          <ListItem disablePadding onClick={() => navigate("/AllActivity")}>
+            <ListItemButton>
+              <ListItemIcon>
+                <StackedLineChartIcon />
+              </ListItemIcon>
+              <ListItemText primary="Activity" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding onClick={() => navigate("/Message")}>
+            <ListItemButton>
+              <ListItemIcon>
+                <FeedIcon  />
+              </ListItemIcon>
+              <ListItemText primary="Conversation" />
+            </ListItemButton>
+          </ListItem>
+         
+
+         
 
           <ListItem disablePadding onClick={() => navigate("/booking")}>
             <ListItemButton>

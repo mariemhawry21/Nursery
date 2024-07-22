@@ -8,7 +8,8 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import Sidenav from "../components/Sidenav";
+import PersistentDrawerLeft from '../components/Drawer';
+
 
 
 
@@ -31,7 +32,7 @@ export default function Messages() {
       <div className="bgcolor" style={{ backgroundColor: "#fff" }}>
         <Box height={70} />
         <Box sx={{ display: "flex" }}>
-          <Sidenav />
+        <PersistentDrawerLeft />
    
     </Box>
 
@@ -54,12 +55,12 @@ export default function Messages() {
           marginRight:"200px",
         }}
       >
-        <Typography variant="h6" gutterBottom >
+        <Typography variant="h6" gutterBottom  style={{marginTop:"100px"}}>
           Search
         </Typography>
         <TextField 
           fullWidth
-          placeholder="All Rooms"
+          placeholder="All Chats"
           value={searchQuery}
           onChange={handleSearchChange}
           InputProps={{

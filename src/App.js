@@ -25,6 +25,7 @@ import AddChild from "./pages/Children/AddChild";
 import AllChild from "./pages/Children/AllChild";
 import AddRoom from "./pages/Room/AddRoom";
 import AllRoom from "./pages/Room/AllRoom";
+import AllActivity from "./pages/Activity/AllActivity";
 
 // import Maseggs from './pages/Maseggs';
 
@@ -64,6 +65,10 @@ export default function App() {
 
           <Route path="/AddRoom" exact element={<AddRoom />}></Route>
           <Route path="/AllRoom" exact element={<AllRoom/>}></Route>
+
+          <Route path="/AllActivity" exact element={<AllActivity/>}></Route>
+
+          <Route path="/Message" exact element={<Messages/>}></Route>
 
 
           {/* <Route path="/Invoicing" exact element={<Invicing/>}></Route> */}
