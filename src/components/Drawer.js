@@ -98,9 +98,138 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function PersistentDrawerLeft() {
+export default function PersistentDrawerLeft({ appBarPageName }) {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
+  let appbarname = appBarPageName;
+  const APPBAR = () => {
+    if (appbarname === "home") {
+      return (
+        <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <IconButton
+                color="#225C8B"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: "none" }) }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Search sx={{ width: "60%" }} className="d-none d-md-flex">
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel id="demo-simple-select-standard-label">
+                  Language
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-standard-label"
+                  id="demo-simple-select-standard"
+                  value={language}
+                  onChange={handleChange}
+                  label="language"
+                >
+                  <MenuItem value="English">English</MenuItem>
+                  <MenuItem value={"Arabic"}>Arabic</MenuItem>
+                </Select>
+              </FormControl>
+              <IconButton
+                size="large"
+                aria-label="show 17 new notifications"
+                color="#225C8B"
+              >
+                <Badge badgeContent={17} color="error">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton size="large" edge="end" color="#225C8B">
+                <AccountCircle />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      );
+    } else if (appbarname === "activity") {
+      return (
+        <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
+          <Toolbar
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                width: "50%",
+              }}
+            >
+              <IconButton
+                color="#225C8B"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: "none" }) }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Search
+                sx={{ width: "60%", borderRadius: "0" }}
+                className="d-none d-md-flex"
+              >
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      );
+    } else {
+      return (
+        <div style={{ marginLeft: "20px", marginTop: 10 }}>
+          <IconButton
+            color="#225C8B"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
+            size="large"
+          >
+            <MenuIcon />
+          </IconButton>
+        </div>
+      );
+    }
+  };
   const navigate = useNavigate();
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -117,71 +246,7 @@ export default function PersistentDrawerLeft() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{ backgroundColor: "#fff" }}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              width: "50%",
-            }}
-          >
-            <IconButton
-              color="#225C8B"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2, ...(open && { display: "none" }) }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Search sx={{ width: "60%" }}>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
-          </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-              <InputLabel id="demo-simple-select-standard-label">
-                Language
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
-                value={language}
-                onChange={handleChange}
-                label="language"
-              >
-                <MenuItem value="English">English</MenuItem>
-                <MenuItem value={"Arabic"}>Arabic</MenuItem>
-              </Select>
-            </FormControl>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="#225C8B"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton size="large" edge="end" color="#225C8B">
-              <AccountCircle />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <APPBAR />
       <Drawer
         sx={{
           width: drawerWidth,
@@ -249,7 +314,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="Staff" />
             </ListItemButton>
           </ListItem>
-          
+
           <ListItem disablePadding onClick={() => navigate("/AllRoom")}>
             <ListItemButton>
               <ListItemIcon>
@@ -258,7 +323,6 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary="Room" />
             </ListItemButton>
           </ListItem>
-
 
           <ListItem disablePadding onClick={() => navigate("/AllActivity")}>
             <ListItemButton>
@@ -272,14 +336,11 @@ export default function PersistentDrawerLeft() {
           <ListItem disablePadding onClick={() => navigate("/Message")}>
             <ListItemButton>
               <ListItemIcon>
-                <FeedIcon  />
+                <FeedIcon />
               </ListItemIcon>
               <ListItemText primary="Conversation" />
             </ListItemButton>
           </ListItem>
-         
-
-         
 
           <ListItem disablePadding onClick={() => navigate("/booking")}>
             <ListItemButton>

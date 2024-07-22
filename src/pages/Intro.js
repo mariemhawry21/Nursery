@@ -8,11 +8,17 @@ import IconButton from "@mui/material/IconButton";
 import logo from "../logo.svg";
 import flag from "../flag.png";
 import intro from "../intro.svg";
+import introBackGround from "../imgs/introBackGround.svg";
 import { useNavigate } from "react-router";
 const Intro = () => {
   const navigate = useNavigate();
   return (
-    <div style={{ backgroundColor: "#FBFBFB", height: "100vh" }}>
+    <div
+      className="intro"
+      style={{
+        height: "100vh",
+      }}
+    >
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" sx={{ backgroundColor: "#fff" }}>
           <Toolbar>
@@ -55,6 +61,7 @@ const Intro = () => {
         </AppBar>
       </Box>
       <Box
+        className="box"
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -68,6 +75,7 @@ const Intro = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            zIndex: 3,
           }}
         >
           <Typography

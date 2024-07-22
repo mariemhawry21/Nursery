@@ -38,7 +38,7 @@ body {
   font-size: 21px;
   background-color: #1da2dc !important;
   margin-left: 940px;
- 
+
 }
 
 
@@ -134,4 +134,33 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
+}
+
+.intro {}
+
+.intro .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(0, 0%, 98%, 50%);
+  height: 100%;
+  z-index: 1;
+}
+
+.intro .box {
+  position: relative;
+  width: 100%;
+  background-image: url(../src/imgs/introback.png) !important;
+  background-size: cover;
+  height: calc(100% - 75px);
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 220px;
 }

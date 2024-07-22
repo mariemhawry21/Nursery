@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <div style={{ backgroundColor: "#FBFBFB", minHeight: "100vh" }}>
-      <ResponsiveDrawer />
+      <ResponsiveDrawer appBarPageName={"home"} />
       <main style={{ marginTop: "80px" }}>
         <div className="container mt-5">
           <h1 style={{ textAlign: "start", marginBottom: 30, fontWeight: 400 }}>
