@@ -9,6 +9,8 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import PersistentDrawerLeft from '../components/Drawer';
+import MessagesDrawer from '../components/MessagesDrawer';
+import ChatApp from './ChatApp';
 
 
 
@@ -55,7 +57,7 @@ export default function Messages() {
           marginRight:"200px",
         }}
       >
-        <Typography variant="h6" gutterBottom  style={{marginTop:"100px"}}>
+        {/* <Typography variant="h6" gutterBottom  >
           Search
         </Typography>
         <TextField 
@@ -77,7 +79,8 @@ export default function Messages() {
               </InputAdornment>
             ),
           }}
-        />
+        /> */}
+        <MessagesDrawer/>
       </Box>
       <Box
         sx={{
@@ -85,6 +88,8 @@ export default function Messages() {
           padding: '20px',
         }}
       >
+
+        {/* <ChatApp/> */}
         <Typography variant="body1" style={{marginTop:"300px"}}>No chat group selected</Typography>
       </Box>
     </Box>

@@ -18,6 +18,10 @@ const rows = [
   createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
   createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
   createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
+  createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
+  createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
+  createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
+  createData('New Room','9 eg','Nada Alaa', 'Jana Alaa'),
 ];
 
 export default function RoomList() {
@@ -27,7 +31,7 @@ export default function RoomList() {
   return (
     <TableContainer className='table-style table table-hover' sx={{ direction: "ltr" }} component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead className='table-head-stayl'>
+        <TableHead className='table-head-stayl' style={{backgroundColor:"#225C8B"}}>
           <TableRow>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">Name</TableCell>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">Capacity</TableCell>

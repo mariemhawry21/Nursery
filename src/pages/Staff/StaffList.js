@@ -18,6 +18,8 @@ const rows = [
   createData('Nada','Alaa','Cairo','Personal Attributes', 'Watting List','Jana Alaa',<img style={{height:"50px",width:"50px"}} src='https://affinityworkforce.com/wp-content/uploads/2023/03/Nursery-staff-image.jpg'></img>),
   createData('Nada','Alaa','Cairo','Professional Development', 'Watting List','Jana Alaa',<img style={{height:"50px",width:"50px"}} src='https://affinityworkforce.com/wp-content/uploads/2023/03/Nursery-staff-image.jpg'></img>),
   createData('Nada','Alaa','Cairo','Teamwork and Collaboration', 'Watting List','Jana Alaa',<img style={{height:"50px",width:"50px"}} src='https://affinityworkforce.com/wp-content/uploads/2023/03/Nursery-staff-image.jpg'></img>),
+  createData('Nada','Alaa','Cairo','Teamwork and Collaboration', 'Watting List','Jana Alaa',<img style={{height:"50px",width:"50px"}} src='https://affinityworkforce.com/wp-content/uploads/2023/03/Nursery-staff-image.jpg'></img>),
+
 ];
 
 export default function StaffList() {
@@ -27,7 +29,7 @@ export default function StaffList() {
   return (
     <TableContainer className='table-style table table-hover' sx={{ direction: "ltr" }} component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead className='table-head-stayl'>
+        <TableHead className='table-head-stayl' style={{backgroundColor:"#225C8B"}}>
           <TableRow>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">First Name</TableCell>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">Last Name</TableCell>

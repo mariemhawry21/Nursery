@@ -18,6 +18,9 @@ const rows = [
   createData('Jana','Alaa','Cairo','Watting List','Nada Alaa',<img style={{height:"50px",width:"50px"}} src='https://www.tinyworld.biz/wp-content/uploads/2016/03/babies7.jpg'></img>),
   createData('Jana','Alaa','Cairo', 'Watting List','Nada Alaa',<img style={{height:"50px",width:"50px"}} src='https://www.tinyworld.biz/wp-content/uploads/2016/03/babies7.jpg'></img>),
   createData('Jana','Alaa','Cairo', 'Watting List','Nada Alaa',<img style={{height:"50px",width:"50px"}} src='https://www.tinyworld.biz/wp-content/uploads/2016/03/babies7.jpg'></img>),
+  createData('Jana','Alaa','Cairo', 'Watting List','Nada Alaa',<img style={{height:"50px",width:"50px"}} src='https://www.tinyworld.biz/wp-content/uploads/2016/03/babies7.jpg'></img>),
+  
+  
 ];
 
 export default function ChildList() {
@@ -27,7 +30,7 @@ export default function ChildList() {
   return (
     <TableContainer className='table-style table table-hover' sx={{ direction: "ltr" }} component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead className='table-head-stayl'>
+        <TableHead className='table-head-stayl' style={{backgroundColor:"#225C8B"}}>
           <TableRow>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">First Name</TableCell>
             <TableCell style={{color:"#fff"}} sx={{fontSize:"18px"}} align="left">Last Name</TableCell>

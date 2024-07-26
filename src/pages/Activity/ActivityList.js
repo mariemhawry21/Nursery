@@ -13,6 +13,7 @@ import {
   Typography,
   Paper,
 } from "@mui/material";
+import AllActivity from "./AllActivity";
 
 const rows = [
   {
@@ -72,27 +73,27 @@ const rows = [
   },
 ];
 
-const DataTable = () => {
+const ActivityList = () => {
   return (
     <TableContainer
       className="table-style table table-hover"
       component={Paper}
-      sx={{ marginTop: "-20px" }}
+      sx={{ marginTop: "" }}
     >
       <Table>
-        <TableHead className="table-head-stayl">
+        <TableHead className="table-head-stayl"  style={{backgroundColor:"#fff"}}>
           <TableRow>
             <TableCell padding="checkbox">
               <Checkbox />
             </TableCell>
             <TableCell>Child Name</TableCell>
             <TableCell>Age Group</TableCell>
-            <TableCell>Food</TableCell>
-            <TableCell>Sleep</TableCell>
-            <TableCell>Diaper</TableCell>
-            <TableCell>Accident</TableCell>
-            <TableCell>Learning</TableCell>
-            <TableCell>Drink</TableCell>
+            <TableCell style={{color: "#4CAF50"}}>Food</TableCell>
+            <TableCell style={{color: "#E91E63" }}>Sleep</TableCell>
+            <TableCell style={{color: "#03A9F4"}}>Diaper</TableCell>
+            <TableCell style={{color: "#9C27B0"}}>Accident</TableCell>
+            <TableCell style={{color: "#FFC107" }}>Learning</TableCell>
+            <TableCell style={{color: "#00BCD4"}}>Drink</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -143,4 +144,4 @@ const DataTable = () => {
   );
 };
 
-export default DataTable;
+export default ActivityList;
