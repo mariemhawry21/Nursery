@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import logo from "../logo.svg";
 import flag from "../flag.png";
 import intro from "../intro.svg";
+import pc from "../imgs/labtop.png";
 import introBackGround from "../imgs/introBackGround.svg";
 import { useNavigate } from "react-router";
 const Intro = () => {
@@ -73,33 +74,46 @@ const Intro = () => {
           sx={{
             marginTop: 5,
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             justifyContent: "center",
             zIndex: 3,
+            overflow: "hidden",
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{ color: "#225C8B", fontWeight: 700, width: "40%" }}
-          >
-            "Nurturing Seeds, Harvesting Blossoms"
-          </Typography>
-          <Box sx={{ textAlign: "end" }}>
-            <img src={intro} alt="intro-image" style={{ width: "80%" }} />
+          <Box sx={{ textAlign: "start", width: "50%", padding: "20px" }}>
+            <Typography
+              variant="h3"
+              sx={{ color: "#225C8B", fontWeight: 700, marginLeft: "20px" }}
+            >
+              "Nurturing Seeds, Harvesting Blossoms"
+            </Typography>
+            <Typography
+              sx={{ color: "#0F283C", fontWeight: "bold", fontSize: "30px" }}
+            >
+              We are committed to providing a safe and stimulating environment
+              for your children.
+            </Typography>
+            <button
+              class="btn  btn-block text-center mb-2 text-white"
+              style={{
+                backgroundColor: "#225C8B",
+                color: "white",
+                padding: "10px",
+                width: "220px",
+                fontWeight: "600",
+              }}
+              onClick={() => navigate("/login")}
+            >
+              Log In
+            </button>
           </Box>
-          <button
-            class="btn  btn-block text-center mb-2 text-white"
-            style={{
-              backgroundColor: "#225C8B",
-              color: "white",
-              borderRadius: "32px",
-              padding: "10px",
-              width: "250px",
-            }}
-            onClick={() => navigate("/login")}
-          >
-            Log In
-          </button>
+          <Box>
+            <img
+              src={pc}
+              alt="intro-image"
+              style={{ width: "100%", marginLeft: "170px" }}
+            />
+          </Box>
         </Box>
       </Box>
     </div>

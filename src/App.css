@@ -112,8 +112,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 40px;
-  justify-content: space-around;
+  grid-gap: 20px;
 }
 
 .home-grid-box {
@@ -126,15 +125,107 @@ body {
   grid-row-end: 2;
 }
 
-.home-grid-box-2 {
+.second {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   grid-column: 3 / 4;
-  grid-row: 1 / 3;
+  grid-row-start: 1;
+
+}
+
+.home-grid-box-2 {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+.home-grid-box-3 {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 3;
+  grid-row-start: 1;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 120px;
 }
+
+.home-grid-box-4 {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #F4FBFD;
+  padding: 20px;
+  border-radius: 15px;
+  color: #F2736D;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  flex: 1;
+}
+
+/*Home Room component css*/
+.room-details-container {
+  width: 746px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tabs button {
+  padding: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+}
+
+.tabs button.active {
+  background-color: #E4F4FA66;
+  font-weight: bold;
+}
+
+.tab-content {
+  background-color: #F4FBFD;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+.room-tab-content .room-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+}
+
+.room-info span {
+  margin-right: 20px;
+}
+
+.room-name {
+  font-weight: bold;
+}
+
+.room-children img,
+.room-staff img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
 
 .intro {}
 
